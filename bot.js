@@ -1473,7 +1473,7 @@ const w = ['./Welcome.png'];
                         ctx.fontSize = '20px';
                         ctx.fillStyle = "#f1f1f1";
                         ctx.textAlign = "center";
-                        ctx.fillText(`welcome to Brix`, 300, 130);
+                        ctx.fillText(``, 300, 130);
                        
                         ctx.font = "bold 12px Arial";
                         ctx.fontSize = '20px';
@@ -1542,7 +1542,7 @@ client.on("guildMemberAdd", (member) => {
             if (dat[Inv])
                 if (dat[Inv] < Invite.uses) {
                     setTimeout(function() {
- channel.send(`**invited by** ${Invite.inviter} `) ;
+ channel.send(`**invited By : ** ${Invite.inviter} `) ;
                     },1500);
  }
             dat[Inv] = Invite.uses;
