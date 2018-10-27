@@ -1575,4 +1575,62 @@ client.on("guildMemberAdd", (member) => {
 
 
 
+client.on('message', message => {
+
+    if(message.content.includes('discord.gg')){
+
+                                            if(!message.channel.guild) return message.reply('**ممنوع نشر روابط بالسيرفر**');
+
+        if (!message.member.hasPermissions(['ADMINISTRATOR'])){
+
+        message.delete()
+
+    return message.reply(`**ممنوع نشر روابط بالسيرفر**`)
+
+    }
+
+}
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
