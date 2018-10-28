@@ -1672,4 +1672,61 @@ if(!message.member.hasPermission("MANAGE_CHANNELS")) return;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const adminprefix = "#";
+const devs = ['506244709694439434'];
+client.on('message', message => {
+  var argresult = message.content.split(` `).slice(1).join(' ');
+    if (!devs.includes(message.author.id)) return;
+if (message.content.startsWith(adminprefix + 'playing')) {
+  client.user.setGame(argresult)
+    message.channel.sendMessage(`**Now you are playing : ${argresult}**`).then(message => {message.delete(6000)})
+} else 
+if (message.content.startsWith(adminprefix + 'stream')) {
+  client.user.setGame(argresult, "https://www.twitch.tv/idk")
+    message.channel.sendMessage(`**Change Stream to  : ${argresult}**`).then(message => {message.delete(6000)})
+}
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
