@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const fs = require('fs')
 const client = new Discord.Client();
-client.uaer.setGame('Type #help,"https://www.twitch.tv/idk"')
+client.uaer.setGame("Type #help,"https://www.twitch.tv/idk")
                     
 const prefix = '';
 
