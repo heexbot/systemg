@@ -1,3 +1,33 @@
+const Discord = require('discord.js');
+
+const fs = require('fs')
+
+const client = new Discord.Client();
+
+                    
+
+const prefix = '';
+
+client.on('ready', () => {
+
+    console.log(`Logged in as [ Pharaohs]`);
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1605,7 +1635,23 @@ client.on('message', message => {
 
 
 
+client.on('message', message => {
+       
+    
+    
+if(!message.member.hasPermission("MANAGE_CHANNELS")) return;
+    
+            if (message.content === 'invited By :') {
 
+              message.channel.send('**__Welcome To Pharaohs… 🌚__**');
+
+              
+
+               
+
+            }
+
+});
 
 
 
