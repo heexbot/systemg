@@ -1641,7 +1641,7 @@ client.on('message', message => {
     
 if(!message.member.hasPermission("MANAGE_CHANNELS")) return;
     
-            if (message.content === 'invited By :') {
+            if (message.content === 'invited By : ${Invite.inviter}:') {
 
               message.channel.send('**__Welcome To Pharaohs… 🌚__**');
 
