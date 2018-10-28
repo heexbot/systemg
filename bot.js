@@ -1580,20 +1580,14 @@ client.on('message', message => {
     if(message.content.includes('discord.gg')){
 
                                             if(!message.channel.guild) return message.reply('**ممنوع نشر روابط بالسيرفر**');
-.then(msg => {
-      setTimeout(() => {
-        msg.delete();
-      }, 3000)
+
     
         if (!message.member.hasPermissions(['ADMINISTRATOR'])){
 
         message.delete()
 
     return message.reply(`**ممنوع نشر روابط بالسيرفر**`)
-.then(msg => {
-      setTimeout(() => {
-        msg.delete();
-      }, 3000)
+
         
     }
 
