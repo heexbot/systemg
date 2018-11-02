@@ -144,7 +144,7 @@ client.on('message', message => {
 
     var command = message.content.split(" ")[0];
 
-    if(command == prefix + 'رسالة') { // الكوماند !bc
+    if(command == prefix + 'رساله') { // الكوماند !bc
 
    if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send('')
       
@@ -1636,14 +1636,11 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-       
-    
-    
-if(!message.member.hasPermission("MANAGE_CHANNELS")) return;
-    
-            if (message.content === 'invited By : ${Invite.inviter}:') {
+        
 
-              message.channel.send('**__Welcome To Pharaohs… 🌚__**');
+            if (message.content === 'ولكم') {
+
+              message.channel.send('**__ᏔᎬᏞᏨᏫᎷᎬ ᎿᏫ ᏢᎻᎯᎡᎯᏫᎻᏚ 🔥__**');
 
               
 
@@ -1703,7 +1700,7 @@ if(!message.member.hasPermission("MANAGE_CHANNELS")) return;
 
 
 const adminprefix = "#";
-const devs = ['506244709694439434'];
+const devs = ['501145327659647009'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
