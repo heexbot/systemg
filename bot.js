@@ -10,6 +10,9 @@ const prefix = '';
 
 client.on('ready', () => {
 
+  client.user.setGame(`ANGELS system`,'https://www.twitch.tv/MeeRcY')
+
+  
     console.log(`Logged in as [ Pharaohs]`);
 
 });
@@ -48,7 +51,7 @@ client.on('voiceStateUpdate', (o,n) => {
 
         ss-=1
 
-        n.guild.channels.get("501125690675036193").edit({
+        n.guild.channels.get("509118238337007657").edit({
 
             name : "Voice Online : [ " + ss+ " ]"
 
@@ -60,7 +63,7 @@ client.on('voiceStateUpdate', (o,n) => {
 
         ss+=1
 
-        n.guild.channels.get("501125690675036193").edit({
+        n.guild.channels.get("509118238337007657").edit({
 
             name : "Voice Online : [ " + ss+ " ]"
 
@@ -72,7 +75,7 @@ client.on('voiceStateUpdate', (o,n) => {
 
 client.on("ready", () => {
 
-    client.guilds.get("501096188792143883").members.forEach(m => {
+    client.guilds.get("509078160525099030").members.forEach(m => {
 
         if (m.voiceChannel) {
 
@@ -80,7 +83,7 @@ client.on("ready", () => {
 
         };
 
-        client.channels.get("501125690675036193").edit({
+        client.channels.get("509118238337007657").edit({
 
             name : "Voice Online : [ " + ss+ " ]"
 
@@ -956,7 +959,7 @@ if(!message.member.hasPermission("MANAGE_CHANNELS")) return;
 
 
 client.on('guildMemberAdd', message =>
-          { message.send(`**🌹 ولكم نورت السيرفر 🌹 \n 👑 آسم العضو [ ${message.user} ] 👑 \n 👤آنت العضو رقم [ ${message.guild.memberCount} ]👤 \n 🏁 تم عمل السيرفر بتاريخ 🏁  [ 14 : 10 : 2018 ] **`)});
+          { message.send(`** _Welcome To angels..._ **`)});
 
 
 
@@ -1151,7 +1154,7 @@ setTimeout(() => {
 
 client.on('guildMemberAdd', member=> {
 
-    member.addRole(member.guild.roles.find("name","Pharaoh - The - BEST- 4 Ever 💘"));
+    member.addRole(member.guild.roles.find("name","The Best Angels..."));
 
     });
 
@@ -1374,7 +1377,7 @@ client.on('message', msg => {
 client.on('message', ( message ) => {
   if(message.author.bot) return;
 
-  if(message.channel.id !== '501330592231718912') return;
+  if(message.channel.id !== '509102861381009458') return;
 
   let types = [
     'jpg',
@@ -1469,7 +1472,7 @@ const jimp = require('jimp');
 const Canvas = require('canvas');
  
 client.on('guildMemberAdd', member => {
-     const welcomer =  member.guild.channels.find('name', 'pharaohs');
+     const welcomer =  member.guild.channels.find('name', 'angels');
 const w = ['./welcome.png'];
  
          let Image = Canvas.Image,
@@ -1533,7 +1536,7 @@ function forEachObject(obj, func) {
 client.on("ready", () => {
     var guild;
     while (!guild)
-        guild = client.guilds.get("501096188792143883");
+        guild = client.guilds.get("509078160525099030");
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -1545,7 +1548,7 @@ client.on("ready", () => {
  
  
 client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.get("501330332830662656");
+    let channel = member.guild.channels.get("509096849152409637");
     if (!channel) {
         console.log("!the channel id it's not correct");
         return;
@@ -1556,7 +1559,7 @@ client.on("guildMemberAdd", (member) => {
     console.log('-');
     var guild;
     while (!guild)
-        guild = client.guilds.get("501096188792143883");
+        guild = client.guilds.get("509078160525099030");
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -1640,7 +1643,7 @@ client.on('message', message => {
 
             if (message.content === 'ولكم') {
 
-              message.channel.send('**__ᏔᎬᏞᏨᏫᎷᎬ ᎿᏫ ᏢᎻᎯᎡᎯᏫᎻᏚ 🔥__**');
+              message.channel.send('**_ Welcome To angels 🔥_**');
 
               
 
@@ -1698,21 +1701,6 @@ client.on('message', message => {
 
 
 
-
-const adminprefix = "#";
-const devs = ['501145327659647009'];
-client.on('message', message => {
-  var argresult = message.content.split(` `).slice(1).join(' ');
-    if (!devs.includes(message.author.id)) return;
-if (message.content.startsWith(adminprefix + 'playing')) {
-  client.user.setGame(argresult)
-    message.channel.sendMessage(`**Now you are playing : ${argresult}**`).then(message => {message.delete(6000)})
-} else 
-if (message.content.startsWith(adminprefix + 'stream')) {
-  client.user.setGame(argresult, "https://www.twitch.tv/idk")
-    message.channel.sendMessage(`**Change Stream to  : ${argresult}**`).then(message => {message.delete(6000)})
-}
-});
 
 
 
