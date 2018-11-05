@@ -53,7 +53,7 @@ client.on('voiceStateUpdate', (o,n) => {
 
         n.guild.channels.get("509118238337007657").edit({
 
-            name : "Voice Online : [ " + ss+ " ]"
+            name : "ANGELS Online : [ " + ss+ " ]"
 
         })
 
@@ -65,7 +65,7 @@ client.on('voiceStateUpdate', (o,n) => {
 
         n.guild.channels.get("509118238337007657").edit({
 
-            name : "Voice Online : [ " + ss+ " ]"
+            name : "ANGELS Online : [ " + ss+ " ]"
 
         })
 
@@ -85,7 +85,7 @@ client.on("ready", () => {
 
         client.channels.get("509118238337007657").edit({
 
-            name : "Voice Online : [ " + ss+ " ]"
+            name : "ANGELS Online : [ " + ss+ " ]"
 
         })
 
