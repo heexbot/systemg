@@ -1565,8 +1565,6 @@ welcomer.sendFile(canvas.toBuffer())
 })
       });                    
 });
-
-
 var dat = JSON.parse("{}");
 function forEachObject(obj, func) {
     Object.keys(obj).forEach(function (key) { func(key, obj[key]) })
@@ -1600,37 +1598,13 @@ client.on("guildMemberAdd", (member) => {
             var Inv = Invite.code;
             if (dat[Inv])
                 if (dat[Inv] < Invite.uses) {
- channel.send(`**By : ${Invite.inviter}**`)            
+ channel.send(`**By : ${Invite.inviter} **`)            
  }
             dat[Inv] = Invite.uses;
         })
     })
 });
 
-
-
-
-
-
-client.on('message', message => {
-
-    if(message.content.includes('discord.gg')){
-
-                                            if(!message.channel.guild) return message.reply('**ممنوع نشر روابط بالسيرفر**');
-
-    
-        if (!message.member.hasPermissions(['ADMINISTRATOR'])){
-
-        message.delete()
-
-    return message.reply(`**ممنوع نشر روابط بالسيرفر**`)
-
-        
-    }
-
-}
-
-});
 
 
 
