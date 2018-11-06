@@ -1550,13 +1550,11 @@ client.on("ready", () => {
 client.on("guildMemberAdd", (member) => {
     let channel = member.guild.channels.get("509096849152409637");
     if (!channel) {
-        console.log("!the channel id it's not correct");
         return;
     }
     if (member.id == client.user.id) {
         return;
     }
-    console.log('-');
     var guild;
     while (!guild)
         guild = client.guilds.get("509078160525099030");
