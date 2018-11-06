@@ -1560,6 +1560,10 @@ welcomer.sendFile(canvas.toBuffer())
      
                     }  )  
      
+            })
+    })
+});
+        
                    
  
 
