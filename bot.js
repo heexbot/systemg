@@ -10,7 +10,7 @@ const prefix = '';
 
 client.on('ready', () => {
 
-  client.user.setGame(`ANGELS system`,'https://www.twitch.tv/MeeRcY')
+  client.user.setGame(`Angels system`,'https://www.twitch.tv/MeeRcY')
 
   
     console.log(`Logged in as [ Pharaohs]`);
@@ -53,7 +53,7 @@ client.on('voiceStateUpdate', (o,n) => {
 
         n.guild.channels.get("509118238337007657").edit({
 
-            name : "ANGELS Online : [ " + ss+ " ]"
+            name : "Angels Online : [ " + ss+ " ]"
 
         })
 
@@ -65,7 +65,7 @@ client.on('voiceStateUpdate', (o,n) => {
 
         n.guild.channels.get("509118238337007657").edit({
 
-            name : "ANGELS Online : [ " + ss+ " ]"
+            name : "Angels Online : [ " + ss+ " ]"
 
         })
 
@@ -85,7 +85,7 @@ client.on("ready", () => {
 
         client.channels.get("509118238337007657").edit({
 
-            name : "ANGELS Online : [ " + ss+ " ]"
+            name : "Angels Online : [ " + ss+ " ]"
 
         })
 
@@ -147,7 +147,7 @@ client.on('message', message => {
 
     var command = message.content.split(" ")[0];
 
-    if(command == prefix + 'رساله') { // الكوماند !bc
+    if(command == prefix + 'BC') { // الكوماند !bc
 
    if(!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send('')
       
@@ -155,13 +155,13 @@ client.on('message', message => {
 
         if(message.author.bot) return;
 
-        if(!args) return message.channel.send(`**رسالة { كلامك :envelope: } ** ${prefix} `).then(msg => msg.delete(5000));
+        if(!args) return message.channel.send(`** BC [ Message ] :envelope:  ** ${prefix} `).then(msg => msg.delete(5000));
 
         
 
         let bcSure = new Discord.RichEmbed()
 
-        message.channel.send(`**هل أنت متأكد من أرسال رسالتك  :mailbox_with_mail: **`).then(msg => msg.delete(5000));
+        message.channel.send(`** Are you sure you want to send the message? :mailbox_with_mail: **`).then(msg => msg.delete(5000));
 
 
 
@@ -175,7 +175,7 @@ client.on('message', message => {
 
         message.channel.send(bcSure).then(msg => {
 
-            msg.react('✅').then(() => msg.react('❎'));
+            msg.react('✅').then((5000) => msg.react('❎'));
 
             message.delete();
 
@@ -209,7 +209,7 @@ client.on('message', message => {
 
                 })
 
-                message.channel.send(` **  لقد تم أرسال رسالتك إلي  [ ${msg.guild.memberCount} ] عضو في السيرفر ✅ **`).then(msg => msg.delete(5000));
+                message.channel.send(` **  Your message has been sent to me  [ ${msg.guild.memberCount} ]  Member of the server ✅ **`).then(msg => msg.delete(5000));
 
                 msg.delete();
 
@@ -219,7 +219,7 @@ client.on('message', message => {
 
                 msg.delete();
 
-                message.reply(':white_check_mark: **تم الغاء ارسال رسالتك بنجاح**').then(msg => msg.delete(5000));
+                message.reply('** :white_check_mark: Your message has been successfully canceled **').then(msg => msg.delete(5000));
 
             });
 
