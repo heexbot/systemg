@@ -260,6 +260,32 @@ message.delete();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 client.on('message', message => {
 
     if (message.content.startsWith("رابط")) {
