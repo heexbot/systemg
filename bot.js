@@ -174,10 +174,8 @@ client.on('message', message => {
         
 
         message.channel.send(bcSure).then(msg => {
-
-            msg.react('✅').then() => msg.react('❎'));
-
-            message.delete();
+        msg.react('✅').then(() => msg.react('❎'));
+        message.delete();
 
             
 
