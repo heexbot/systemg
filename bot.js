@@ -163,9 +163,9 @@ client.on('message', message => {
         message.channel.send(`** Are you sure you want to send the message? :mailbox_with_mail: **`).then(msg => msg.delete(5000));
       
       
+
       
-      
-message.channel.send(bcSure).then(msg => {
+message.channel.send().then(msg => {
 msg.react('✅').then(() => msg.react('❎'));
 message.delete();
 
