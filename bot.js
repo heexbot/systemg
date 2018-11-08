@@ -162,6 +162,7 @@ client.on('message', message => {
 
         message.channel.send(`** Are you sure you want to send the message? :mailbox_with_mail: **`).then(msg => msg.delete(5000));
       
+              let bcSure = new Discord.RichEmbed()
 
               
 message.channel.send().then(msg => {
