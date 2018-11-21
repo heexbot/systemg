@@ -79,7 +79,7 @@ client.on('voiceStateUpdate', (o,n) => {
 
         ss+=1
 
-        n.guild.channels.get("514170642724290590").edit({
+        n.guild.channels.get("514170643311362072").edit({
 
             name : "Angels Online : [ " + ss+ " ]"
 
