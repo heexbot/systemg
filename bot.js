@@ -10,7 +10,7 @@ const prefix = '';
 
 client.on('ready', () => {
 
-  client.user.setGame(`Angels system`,'https://www.twitch.tv/MeeRcY')
+  client.user.setGame(``,'https://www.twitch.tv/MeeRcY')
 
   
     console.log(`Logged in as [ Pharaohs]`);
@@ -19,6 +19,22 @@ client.on('ready', () => {
 
 
 
+
+
+
+
+
+
+const adminprefix = "#";
+const devs = ['514938170320748545'];
+client.on('message', message => {
+  var argresult = message.content.split(` `).slice(1).join(' ');
+    if (!devs.includes(message.author.id)) return;
+if (message.content.startsWith(adminprefix + 'st')) {
+  client.user.setGame(argresult, "https://www.twitch.tv/idk")
+    message.channel.sendMessage(`**:white_check_mark: تم تغير حاله البوت الي  : ${argresult}**`)
+}
+});
 
 
 
@@ -63,7 +79,7 @@ client.on('voiceStateUpdate', (o,n) => {
 
         ss+=1
 
-        n.guild.channels.get("509118238337007657").edit({
+        n.guild.channels.get("514170642724290590").edit({
 
             name : "Angels Online : [ " + ss+ " ]"
 
@@ -75,7 +91,7 @@ client.on('voiceStateUpdate', (o,n) => {
 
 client.on("ready", () => {
 
-    client.guilds.get("509078160525099030").members.forEach(m => {
+    client.guilds.get("514170642724290590").members.forEach(m => {
 
         if (m.voiceChannel) {
 
@@ -83,7 +99,7 @@ client.on("ready", () => {
 
         };
 
-        client.channels.get("509118238337007657").edit({
+        client.channels.get("514170643311362072").edit({
 
             name : "Angels Online : [ " + ss+ " ]"
 
@@ -1048,7 +1064,7 @@ setTimeout(() => {
 
 client.on('guildMemberAdd', member=> {
 
-    member.addRole(member.guild.roles.find("name","The Best Angels..."));
+    member.addRole(member.guild.roles.find("to the best"));
 
     });
 
@@ -1271,7 +1287,7 @@ client.on('message', msg => {
 client.on('message', ( message ) => {
   if(message.author.bot) return;
 
-  if(message.channel.id !== '509102861381009458') return;
+  if(message.channel.id !== '514941777065672716') return;
 
   let types = [
     'jpg',
@@ -1402,7 +1418,7 @@ const jimp = require('jimp');
 const Canvas = require('canvas');
  
 client.on('guildMemberAdd', member => {
-     const welcomer =  member.guild.channels.find('name', 'angels');
+     const welcomer =  member.guild.channels.find('name', 'general');
 const w = ['./welcome.png'];
  
          let Image = Canvas.Image,
@@ -1464,7 +1480,7 @@ function forEachObject(obj, func) {
 client.on("ready", () => {
     var guild;
     while (!guild)
-        guild = client.guilds.find("name", "!...")
+        guild = client.guilds.find("name", "ممكن نتفاهم !")
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -1473,7 +1489,7 @@ client.on("ready", () => {
     })
 })
 client.on("guildMemberAdd", (member) => {
-    let channel = member.guild.channels.find('name', 'angels');
+    let channel = member.guild.channels.find('name', 'general');
     if (!channel) {
         console.log("!channel fails");
         return;
@@ -1484,7 +1500,7 @@ client.on("guildMemberAdd", (member) => {
     console.log('made it till here!');
     var guild;
     while (!guild)
-        guild = client.guilds.find("name", "!...")
+        guild = client.guilds.find("name", "ممكن نتفاهم !")
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -1571,6 +1587,15 @@ client.on('message', message => {
 
 
 
+
+
+
+client.on("ready", () => { // حقوق سيرفركودز
+  function lol() {
+    client.guilds.get('514170642724290590').roles.find("name", "to the best").setColor("RANDOM");
+  };
+  setInterval(lol, 1000);
+});
 
 
 
