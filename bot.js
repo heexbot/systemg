@@ -6,11 +6,11 @@ const client = new Discord.Client();
 
                     
 
-const prefix = '';
+const prefix = 'F';
 
 client.on('ready', () => {
 
-  client.user.setGame(``,'https://www.twitch.tv/MeeRcY')
+  client.user.setGame(`Five System`,'https://www.twitch.tv/iidd')
 
   
     console.log(`Logged in as [ Pharaohs]`);
@@ -26,7 +26,7 @@ client.on('ready', () => {
 
 
 const adminprefix = "#";
-const devs = ['514938170320748545'];
+const devs = ['323888904602124299'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
@@ -134,7 +134,7 @@ client.on("ready", () => {
 
 });
 
-// جميع الحقوق محفوظة لدى :@┃HEART┃ ❦  4EVER#9512 
+ 
 
 
 
@@ -152,7 +152,7 @@ client.on('message', function(msg) {
   if(msg.content.startsWith ('معلومات السيرفر')) {
     if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
     let embed = new Discord.RichEmbed()
-    .setColor('BLUE')
+    .setColor('RANDOM')
     .setThumbnail(msg.guild.iconURL)
     .addField(':globe_with_meridians: **اسم السيرفر : **' , `**[ __${msg.guild.name}__ ]**`,true)
     .addField(':earth_africa: ** موقع السيرفر :**',`**[ __${"EGYPT"}__ ]**`,true)
@@ -249,7 +249,7 @@ client.on('message', message => {
 
 client.on('message', message => {
 
-    var prefix = "";
+    var prefix = "F";
 
 if(!message.channel.guild) return;
 
@@ -781,7 +781,7 @@ client.on('message', message => {
         return;
     }
             let embed = new Discord.RichEmbed()
-                .setColor("BLACK")
+                .setColor("RANDOM")
                 .setAuthor("هل تريد أضافة روم كتابي او صوتي ؟")
                 .setDescription("**Text:** 📋\n\n**Voice:** 🔊");
  
@@ -893,8 +893,7 @@ if(!message.member.hasPermission("MANAGE_CHANNELS")) return;
 
 
 
-client.on('guildMemberAdd', message =>
-          { message.send(`** _Welcome To angels..._ **`)});
+
 
 
 
